@@ -7,3 +7,4 @@ global using Mapster;
 global using VerticalSliceArchitecture.Api.Common.Result;
 global using VerticalSliceArchitecture.Api.Common.Extensions;
 global using Microsoft.EntityFrameworkCore;
+global using VerticalSliceArchitecture.Api.Common.Contracts;
