@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
+using VerticalSliceArchitecture.Api.Common.Behaviors;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
@@ -15,6 +16,9 @@ services.AddMediatR(options =>
 
 // Add Fluent validation
 services.AddValidatorsFromAssembly(typeof(Program).Assembly);
+
+// Add Validation behavior
+services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
 builder.Services.AddCarter();
 builder.Services.AddOpenApi();
