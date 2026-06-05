@@ -13,9 +13,6 @@ services.AddDbContext<ApplicationDbContext>(option =>
 services.AddMediatR(options =>
     options.RegisterServicesFromAssemblyContaining(typeof(Program)));
 
-// add Auto mapper profiles
-services.AddAutoMapper(cfg => { }, typeof(Program).Assembly);
-
 // Add Fluent validation
 services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
