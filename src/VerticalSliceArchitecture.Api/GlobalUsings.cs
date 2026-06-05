@@ -1,0 +1,1 @@
+﻿global using VerticalSliceArchitecture.Api.Entities.Base;
